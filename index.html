@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<iframe id="myframe"></iframe>
+
+<p>Click the button to change the background color of the document contained in the iframe.</p>
+
+<p id="demo"></p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myframe");
+  var y = (x.contentWindow || x.contentDocument);
+  if (!!y.document) {
+  	y.document.body.innerHTML = "123";
+  }
+  
+}
+</script>
+
+</body>
+</html>
